@@ -21,20 +21,21 @@ lst_files <- str_remove(
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
-    # Application title
+    # Application title 
     titlePanel("Teste Mapa"),
 
         # Show a plot of the generated distribution
         mainPanel(
                   sliderTextInput(
                       inputId = "IDFIG",
+                      animate = TRUE,
                       label = "Escolha a data", 
                       choices = lst_files,
                       grid=TRUE
                   ),
             imageOutput("plop", 
-                        width = "2px", 
-                        height = "2px", 
+                        width = "40%", 
+                        height = "100",
                         inline = FALSE)
         )
     )
